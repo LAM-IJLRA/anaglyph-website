@@ -1,0 +1,85 @@
+/*
+ * Where personal modif (bootstrap override, new classes, etc.) go.
+ */
+
+body{
+  background-color: rgb(255, 255, 255);
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.faq-q {
+  font-weight: 600;
+}
+
+.faq-a {
+  margin-left: 30px;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+li {
+  font-size: 15px;
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 350;
+}
+
+pre {
+    white-space:normal;
+}
+
+code {
+  font-size: 13px;
+  font-weight: 300;
+  background: #f5f5f5;
+  color:black;
+}
+
+.img-responsive {
+    /*margin: 0 auto; // align center*/
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /*margin-right: 0px;
+    margin-left: 0px;    */
+}
+
+.embed-responsive {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.code-header {
+  margin-bottom:5;
+}
+
+.row:target {
+    padding-top: 40px;
+}
+
+/*
+.navbar-inverse {
+  background-color: #fafafa;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #0e0e0e;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #b7b7b7;
+  background-color: transparent;
+}*/
