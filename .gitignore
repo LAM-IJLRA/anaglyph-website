@@ -1,2 +1,5 @@
 # ignore junk files
 .DS_Store
+
+# ignore release folder (manually pushed to the server)
+release
