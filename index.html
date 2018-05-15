@@ -3,101 +3,64 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <div w3-include-html="include/header.html"></div>
 
-    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!-- Include method -->
+    <script src="js/includeHTML.js"></script>
 
-    <title>Anaglyph</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/override.css" rel="stylesheet">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#head">
-                    Anaglyph
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li> <a href="#install">Install</a> </li>
-                    <li> <a href="#gallery">Gallery</a> </li>
-                    <li> <a href="#about">About</a> </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <div w3-include-html="include/navbar.html"></div>
 
     <!-- Page Content -->
     <div class="container">
 
         <div class="row" id="head">
-
             <div class="col-lg-12 text-left">
-                <h1><font color="#94b595">Anaglyph</font></h1>
+                <h1><font color="#94b595">Anaglyph, 3D for your ears</font></h1>
                 <!-- <h1><font color="#0771ba">Ana</font><font color="#fb001a">glyph</font></h1> -->
             </div>
-
             <div class="col-lg-12 text-justify">
-            <p> Binaural spatialization engine <a href="https://en.wikipedia.org/wiki/Virtual_Studio_Technology">VST</a>. </p>
+            <p> High-definition Binaural spatialization engine. </p>
             </div>
 
-            <p> </p> <!-- insert line break -->
+            <p> </p> <!-- insert line break -->
 
             <div class="col-lg-8 text-center col-lg-offset-2">
             <p class="lead">
-                    Integrating the results of over a decade of spatial hearing research.
-                    Handle with care.
+                    Integrating the results of over a decade of spatial hearing research into a high-precision binaural rendering engine.
             </p>
                 <img class="img-responsive center-block" src="img/screenshot.png">
             </div>
 
              <div class="col-lg-12 text-justify">
                 <p>
-                    Anaglyph is part of an ongoing research effort into the perceptual and technical capabilities of binaural rendering. Anaglyph has been designed as an audio plugin to both support ongoing research efforts as well as to make accessible the fruits of this research to audio engineers through traditional existing <a href="https://en.wikipedia.org/wiki/Digital_audio_workstation">DAW</a> environments. Amongst its features, Anaglyph includes a personalizable morphological ITD model,  near-field ILD corrections and <a href="https://en.wikipedia.org/wiki/Head-related_transfer_function">HRTF</a> parallax selection, a Localisation Enhancer, an Externalisation Booster, and <a href="https://www.sofaconventions.org/mediawiki/index.php/SOFA_(Spatially_Oriented_Format_for_Acoustics)">SOFA</a> HRIR file support.
+                    Anaglyph is part of an ongoing research effort into the perceptual and technical capabilities of binaural rendering. The latest incarnation, Anaglyph <a href="https://en.wikipedia.org/wiki/Virtual_Studio_Technology">VST</a>, has been designed as an audio plugin to both support ongoing research efforts as well as to make accessible the fruits of this research to audio engineers through traditional existing <a href="https://en.wikipedia.org/wiki/Digital_audio_workstation">DAW</a> environments. Amongst its features, Anaglyph includes a personalizable morphological ITD model,  near-field ILD corrections and <a href="https://en.wikipedia.org/wiki/Head-related_transfer_function">HRTF</a> parallax selection, a Localisation Enhancer, an Externalisation Booster, and <a href="https://www.sofaconventions.org/mediawiki/index.php/SOFA_(Spatially_Oriented_Format_for_Acoustics)">SOFA</a> HRIR file support.
                 </p>
             </div>
-
         </div>
+
+       <div class="row" id="features">
+            <div class="col-lg-12 text-justify">
+                <h2>Features</h2>
+
+                <h3>HRIR/HRTF Personalization</h3>
+                Customization of binaural rendering parameters for a given listener. Select here the specific HRTF (ears), by choosing an appropriate HRTF/SOFA file. Tailor HEAD SIZE to optimize lateral cues.
+
+                <h3>Near-Field Enhancements</h3>
+                Rendering enhancements that improve the sensation of distance for nearby source positions. PARALLAX correction selects HRIR positions based on the actual direction of arrival of the sound object as “seen” by each ear, rather than using the head-centered coordinate system. ILD correction modifies the right/left levels, as a function of frequency, to account for the head shadowing effect of nearby sound objects. This modification is applied predominantly to the opposite side ear, in an effort to maintain sound level of the nearby ear.
+
+                <h3>Externalization Booster</h3>
+                When rendering sounds over headphones, a common artifact is that sounds seem to be very near, or even inside, the listeners head. This does not typically occur when listening over monitor speakers in a studio. This module adds the subtle acoustic cues of a reproduction system in an acoustically controlled studio, providing improved externalization. This is not to be confused with a reverberation plug-in. GAIN, EQ, and SPATIAL DETAIL level can be adjusted to optimize the effect for the given soundscape to improve transparency while providing these additional cues.
+
+                <h3>Stabilization Enhancer</h3>
+                In the case of non-tracked binaural rendering, static source positions are sometimes difficult to localize correctly, with front/back confusions often occurring for sources in certain regions. To reduce such confusions, and to help stabilize the perceived position of the sound object, the actual rendered position is varied slightly, providing “added redundancy” of localization cues to the brain, reducing localization confusion.
+            </div>
+        </div>
+
 
         <div class="row" id="install">
             <div class="col-lg-12 text-justify">
@@ -112,27 +75,6 @@
             </div>
         </div>
 
-        <div class="row" id="gallery">
-            <div class="col-lg-12 text-justify">
-                <h2>Gallery</h2>
-            </div>
-
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h5>Example use case of the Anaglyph plugin in Ableton<h5>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7z7MuPFr9PU?rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-            </div>
-
-
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h5>VR based experiment realised with the Anaglyph VST (Unity and Max)<h5>
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/q6muds1qW-w" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-            </div>
-
-        </div>
 
         <div class="row" id="about">
             <div class="col-lg-12 text-justify">
@@ -140,7 +82,7 @@
 
                 <p>
                     <b>Cite</b>:
-                    <a href="https://pyrapple.github.io/">D. Poirier-Quinot</a> and <a href="http://www.lam.jussieu.fr/Membres/Katz/index.html">B. F.G. Katz</a>, “The Anaglyph binaural audio engine”, in Audio Eng Soc Conv 144, (Milan), pp. 9591:1–8, May 2018. <a href="http://www.aes.org/events/144/ebriefs/?ID=6041">[ref]</a>
+                    <a href="https://pyrapple.github.io/">D. Poirier-Quinot</a> and <a href="http://www.lam.jussieu.fr/Membres/Katz/index.html">B. F.G. Katz</a>, “The Anaglyph binaural audio engine”, in Audio Eng Soc Conv 144, (Milan), pp. 9591:1–8, May 2018. <a href="http://www.aes.org/events/144/ebriefs/?ID=6041">[ref]</a>
                 </p>
 
                 <p>
@@ -150,26 +92,22 @@
 
                 <p>
                     <b>Credits</b>:
-                    Anaglyph has been developed as a joint effort between different labs and researchers throughout the years supervised by <a href="http://www.lam.jussieu.fr/Membres/Katz/index.html">B. F.G. Katz</a>.
+                    Anaglyph was developed in the context of numerous academic research projects with the CNRS (previously under the name LSE) and Sorbonne University, with participation by the Dyson School of Engineering, Imperial College London within the remit of the <a href="http://3d-tune-in.eu/">3D Tune-In</a> project.
+                    <br>
+                    The Anaglyph project is supervised by <a href="http://www.lam.jussieu.fr/Membres/Katz/index.html">B. F.G. Katz</a>.
                 </p>
             </div>
             <div class="col-lg-12 text-center">
-                <p> </p>
+                <p> </p>
                 <p>
                     <a href="mailto:anaglyph@dalembert.upmc.fr"><i class="fa fa-envelope-o fa-2x"></i></a>
                 </p>
             </div>
         </div>
 
-    </div> <!-- /.container -->
-
-
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
 </body>
+
+<!-- include w3-include-html div type pages (navbar, etc.) -->
+<script> includeHTML(); </script>
 
 </html>
