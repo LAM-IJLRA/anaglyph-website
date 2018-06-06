@@ -67,35 +67,79 @@
     <!-- Page Content -->
     <div class="container">
 
-        <div class="col-lg-12 text-justify">
-            <h2>Gallery</h2>
-        </div>
+        <div class="row" id="compatibility">
+            <div class="col-lg-12 text-justify">
+                <h2>Compatibility</h2>
 
-        <!-- Demo LSE video Alladin -->
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-            <h5>Example use case of the Anaglyph plugin in Ableton<h5>
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7z7MuPFr9PU?rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Tested on</th>
+                      <th scope="col">MacOS</th>
+                      <th scope="col">Windows</th>
+                      <th scope="col">Linux</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Reaper</th>
+                      <td>&#10004;</td>
+                      <td>&#10004;</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Ableton</th>
+                      <td>&#10004;</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Pro Tools</th>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Ardour</th>
+                      <td>&#10004;</td>
+                      <td></td>
+                      <td>&#10004;</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Max 6</th>
+                      <td>&#10004;</td>
+                      <td>&#10004;</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Max 7</th>
+                      <td>&#10004;</td>
+                      <td>&#10004;</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
             </div>
         </div>
 
 
-        <!-- demo Oculus HRTF indiv experiment -->
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-            <h5>VR based experiment realised with the Anaglyph VST (Unity and Max, studio/room reverb disabled)<h5>
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/q6muds1qW-w" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="row" id="faq">
+            <div class="col-lg-12 text-justify">
+                <h2>Frequently Asked Questions</h2>
+                <ul>
+                    <li> Why is my DAW slower to charge the plugin or change HRTFs when running in 48kHz? </li>
+                    <p> Because of internal resampling. Choices are: set your DAW's sampling rate to 44100Hz, or resample the plugin HRTFs to match the targeted sampling rate.<p>
+                </ul>
             </div>
         </div>
 
-
-        <!-- demo binaural doctor -->
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-            <h5>Introduction to binaural created with the finished VST (wear headphones)<h5>
-
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" width="100%" style="" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/295939341&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_artwork=false"></iframe>
-          </div>
+        <div class="row" id="issues">
+            <div class="col-lg-12 text-justify">
+                <h2>Known issues</h2>
+                <ul>
+                    <li><p> Max 6 32bits OSX: crashes when the plugin GUI is closed with the top left cross button. Use Max &#8220;wclose&#8221; command instead.</p></li>
+                </ul>
         </div>
 
     </div> <!-- /.container -->
