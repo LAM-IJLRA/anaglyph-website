@@ -67,31 +67,38 @@
     <!-- Page Content -->
     <div class="container">
 
-        <div class="row" id="compatibility">
+        <div class="row" id="download">
             <div class="col-lg-12 text-justify">
-                <h2>Getting started with Unity plugin (incoming) </h2>
-                
-                <h3>Setup your first Anaglyph audio source</h3>
-                <ul>
-                    <li> Add the AnaglyphUnityPackage to the Assets folder of your Unity project. </li>
-                    <li> Add a standard Unity audio source to an object in your scene. Set it up (AudioClip, etc.), check it works as intended. </li>
-                    <li> Add the AnaglyphSource.cs script component to that object. </li>
-                    <li> Setup its Audio Mixer field to point to the AnaglyphAudioMixer.mixer in the Resources folder of the AnaglyphUnityPackage. </li>
-                    <img class="img-responsive center-block" style="width:350px" src="img/tuto-unity-1.png">
-                    <li> Start the scene, you should have binaural sound. </li>
-                    <li> You can tweak Anaglyph presets in the Inspector by selecting the AnaglyphAudioMixer/Master component. </li>
-                    <img class="img-responsive center-block" style="width:200px" src="img/tuto-unity-2.png">
-                    <img class="img-responsive center-block" style="width:350px" src="img/tuto-unity-3.png">
-                </ul>
+                <h2>Download</h2>
 
-                <h3>Setup multiple sources</h3>
-                <p> Follow the same steps to create a second audio source, yet have the AnaglyphSource script field Audio Mixer point to another AnaglyphAudioMixer.mixer (e.g. duplicate the original with Ctrl+D). A more elegant (understand dynamic) solution is coming soon. </p>
+                    <p>Download files and follow instructions according to your architecture: </p>
 
-                <p>You can use the attributes flagged as ''Anaglyph parameter'' in the AnaglyphConfig.cs file to define changes that will be applied to all the instances of AnaglyphSource upon startup.</p>
+                    <ul>
+                        <li> MacOS VST2 <a href="release/anaglyph-macos-v0.9.3b.zip" download onclick="handleOutboundLinkClicks('OSX VST');">anaglyph-macos-v0.9.3b.zip</a></li>
 
-                <h3>Export your game</h3>
-                <p>Unity export target architecture should match anaglyph plugin's architecture (likely 64 bits). On Windows, you'll need to copy the full content of the anaglyph_plugin_data folder into Unity ProjectName_Data/Resources folder (created by Unity build) for Anaglyph to find its dependencies.</p>
-                
+                        <li> Windows VST2 64bit <a href="release/anaglyph-win-v0.9.3b.zip" download onclick="handleOutboundLinkClicks('WIN VST');" >anaglyph-win-v0.9.3b.zip</a></li>
+
+                        <li> Windows VST2 32bit <a href="release/anaglyph-win32-v0.9.3b.zip" download onclick="handleOutboundLinkClicks('WIN VST');" >anaglyph-win32-v0.9.3b.zip</a></li>
+
+                        <br>
+
+                        <li> MacOS Unity plugin <a href="release/anaglyph-unity-macos-v0.9.3b.zip" download onclick="handleOutboundLinkClicks('OSX UNITY');" >anaglyph-unity-macos-v0.9.3b.zip</a></li>
+
+                        <li> Windows Unity plugin <a href="release/anaglyph-unity-win-v0.9.3b.zip" download onclick="handleOutboundLinkClicks('WIN UNITY');" >anaglyph-unity-win-v0.9.3b.zip</a></li>
+
+                    </ul>
+
+                    <p> Previous releases and release notes can be found <a href="page-misc.html#release-note">here</a>.</p>
+
+                    <p class="text-center"> <a href="mailto: sympa@listes.upmc.fr?subject=subscribe anaglyph"> keep me updated about future releases (mailing list)</a> </p>
+                    <p class="text-center"> consult the <a href="https://www.listes.upmc.fr/wws/arc/anaglyph">newsletter archives</a> </p>
+
+                    <p><i>To use custom <a href="https://www.sofaconventions.org">Sofa</a> HRTF in Anaglyph, follow the instructions in the <a href="release/anaglyph-hrtf-preprocess.zip">anaglyph-hrtf-preprocess.zip</a> Matlab package. The plug-in can be used in Max Cycling '74, see the <a href="release/control-msg.maxpat">control-msg.maxpat</a> patch for a complete list of control messages.</i></p>
+
+                    <p> </p>
+                    <img class="img-responsive center-block" style="width:150px" src="img/anaglyph_logo_version_monkey.png">
+                    <h5 class="text-center"> Anaglyph v 0.9 - Wise Monkey </h5>
+
             </div>
         </div>
 
