@@ -37,6 +37,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- common header (paste on every pages) -->
 
+    <!-- analytics -->
     <script>
       function handleOutboundLinkClicks(eventLabel) {
         // create tracker
@@ -48,6 +49,16 @@
           eventLabel: eventLabel,
         });
       }
+    </script>
+
+    <!-- alternate title color -->
+    <script>
+    window.onload = function () {
+        var colorList = ["#0170c0", "#f64f44"];
+        var mainTitle = document.getElementById("main-title");
+        var color = colorList[Math.floor(Math.random() * colorList.length)];
+        mainTitle.style.color = color;
+    };
     </script>
 
 </head>
@@ -95,7 +106,7 @@
 
         <div class="row" id="head">
             <div class="col-lg-12 text-left">
-                <h1><font color="#94b595">Anaglyph, 3D to your ears</font></h1>
+                <h1 id="main-title">Anaglyph, 3D to your ears</h1>
                 <!-- <h1><font color="#0771ba">Ana</font><font color="#fb001a">glyph</font></h1> -->
             </div>
             <div class="col-lg-12 text-justify">
