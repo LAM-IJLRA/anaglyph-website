@@ -74,10 +74,11 @@ code {
 button {
   color: black;
   font-weight: 300;
+  font-size: 18px;
   padding: 20px;
   margin: 10px;
   width: 100%;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   border-radius: 6px;
   outline:none;
   /*display: inline-block;*/
