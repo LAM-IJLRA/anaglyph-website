@@ -88,6 +88,11 @@ button:hover {
   background: rgb(240, 240, 240);
 }
 
+/* table: all but first row/column */
+th:not(:first-child), td:not(:first-child) {
+  text-align: center;
+}
+
 /*
 .navbar-inverse {
   background-color: #fafafa;
