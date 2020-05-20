@@ -17,6 +17,10 @@ h2 {
   margin-bottom: 20px;
 }
 
+h1, h2, h3, h4, h5 {
+  text-align: left;
+}
+
 .faq-q {
   font-weight: 600;
 }
@@ -91,6 +95,29 @@ button:hover {
 /* table: all but first row/column */
 th:not(:first-child), td:not(:first-child) {
   text-align: center;
+}
+
+/* hide anaglyph home */
+@media only screen and (max-width: 767px) {
+  #home-logo-link {
+    display: none;
+  }
+}
+/* add anaglyph home to navbar collapsed menu when anaglyph logo disapeared */
+@media only screen and (min-width: 768px) {
+  #home-navbar-replacement {
+    display: none;
+  }
+}
+
+/* avoid weird misalignement on navbar in collapsed mode */
+.container > .navbar-header {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.navbar-toggle {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /*
