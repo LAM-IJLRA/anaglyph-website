@@ -51,7 +51,7 @@
                 <ul class="nav navbar-nav">
                     <li id="home-navbar-replacement"> <a href="index.html">Home</a> </li>
                     <li> <a href="index.html#download">Download</a> </li>
-                    <!-- <li> <a href="page-tutorials.html">Tutorials</a> </li> -->
+                    <li> <a href="page-tutorials.html">Tutorials</a> </li>
                     <li> <a href="page-gallery.html">Gallery</a> </li>
                     <li> <a href="page-references.html">References</a> </li>
                     <li> <a href="page-misc.html">Misc.</a> </li>
@@ -69,23 +69,23 @@
 
         <div class="row" id="compatibility">
             <div class="col-lg-12 text-justify">
-                <h2>Getting started with Unity plugin (incoming) </h2>
+                <h2>Unity plugin</h2>
                 
-                <h3>Setup your first Anaglyph audio source</h3>
+                <h3>Setup an Anaglyph audio source</h3>
                 <ul>
                     <li> Add the AnaglyphUnityPackage to the Assets folder of your Unity project. </li>
-                    <li> Add a standard Unity audio source to an object in your scene. Set it up (AudioClip, etc.), check it works as intended. </li>
+                    <li> Add an Audio Source component to an object in your scene. Set it up (AudioClip, etc.), check it works as intended. </li>
                     <li> Add the AnaglyphSource.cs script component to that object. </li>
-                    <li> Setup its Audio Mixer field to point to the AnaglyphAudioMixer.mixer in the Resources folder of the AnaglyphUnityPackage. </li>
+                    <li> Drag and drop the ./AnaglyphUnityPackage/Resources/AnaglyphAudioMixer/Master in the Output field of the Audio Source component. </li>
                     <img class="img-responsive center-block" style="width:350px" src="img/tuto-unity-1.png">
-                    <li> Start the scene, you should have binaural sound. </li>
+                    <li> Start the scene and move the object with respect to your Scene Audio Listener (Camera) to check the binaural rendering. </li>
                     <li> You can tweak Anaglyph presets in the Inspector by selecting the AnaglyphAudioMixer/Master component. </li>
                     <img class="img-responsive center-block" style="width:200px" src="img/tuto-unity-2.png">
                     <img class="img-responsive center-block" style="width:350px" src="img/tuto-unity-3.png">
                 </ul>
 
                 <h3>Setup multiple sources</h3>
-                <p> Follow the same steps to create a second audio source, yet have the AnaglyphSource script field Audio Mixer point to another AnaglyphAudioMixer.mixer (e.g. duplicate the original with Ctrl+D). A more elegant (understand dynamic) solution is coming soon. </p>
+                <p> Follow the same steps to create a second audio source, yet have the AnaglyphSource script field Audio Mixer point to another AnaglyphAudioMixer/Master (e.g. duplicate the original AnaglyphAudioMixer with Ctrl+D).</p>
 
                 <p>You can use the attributes flagged as ''Anaglyph parameter'' in the AnaglyphConfig.cs file to define changes that will be applied to all the instances of AnaglyphSource upon startup.</p>
 
