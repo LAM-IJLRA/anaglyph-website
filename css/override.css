@@ -7,9 +7,14 @@ body{
   padding-top: 70px;
 }
 
-p, li, th, td {
+p, li {
   font-size: 17px;
   font-weight: 300;
+}
+
+th, td {
+  font-size: 17px;
+  font-weight: 450;
 }
 
 h2 {
