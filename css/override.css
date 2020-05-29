@@ -36,6 +36,14 @@ li {
   font-weight: 300;
 }
 
+ul.airy-list {
+  list-style-type: none;
+}
+ul.airy-list > li {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
 .lead {
   font-size: 18px;
   font-weight: 350;
