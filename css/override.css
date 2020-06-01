@@ -101,6 +101,16 @@ button:hover {
   background: rgb(245, 245, 245);
 }
 
+button:disabled {
+  background: repeating-linear-gradient(
+    -45deg,
+    white,
+    white 10px,
+    rgb(200, 200, 200) 10px,
+    rgb(200, 200, 200) 12px
+  );
+}
+
 /* table: all but first row/column */
 th:not(:first-child), td:not(:first-child) {
   text-align: center;
