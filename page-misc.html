@@ -140,11 +140,20 @@
             <div class="col-lg-12 text-justify">
                 <h2>Frequently Asked Questions</h2>
 
-                    <p> <b> Why is my DAW slower to charge the plugin or change HRTFs when running in 48kHz? </b> <br /> Because of internal resampling. Choices are: set your DAW's sampling rate to 44100Hz, or resample the plugin HRTFs to match the targeted sampling rate.<p>
+                    <p> <b> Why is my DAW slower to charge the plugin or change HRTFs when running in 48kHz? </b> <br /> Because of internal resampling. Choices are: set your DAW's sampling rate to 44100Hz, or resample the plugin HRTFs to match the targeted sampling rate. </p>
 
-                    <p> <b> Why do I get a &#8220;failed to load file ... anaglyph_ild_model_*.sofa&#8221; pop-up window? </b> <br /> Your current DAW sampling frequency is not supported. Anaglyph relies on pre-computed tables for ILD generation, only bundled for 44.1kHz and 48kHz. Let us know if you really need a specific sampling frequency.<p>
+                    <p> <b> Why do I get a &#8220;failed to load file ... anaglyph_ild_model_*.sofa&#8221; pop-up window? </b> <br /> Your current DAW sampling frequency is not supported. Anaglyph relies on pre-computed tables for ILD generation, only bundled for 44.1kHz and 48kHz. Let us know if you really need a specific sampling frequency. </p>
 
-                    <p> <b> The VST3 GUI doesn't scale correctly in Reaper </b> <br /> Update Reaper (v6.11 or above).<p>
+                    <p> <b> The VST3 GUI doesn't scale correctly in Reaper </b> <br /> Update Reaper (v6.11 or above). </p>
+
+                    <p> <b> Using Anaglyph with MacOS Catalina raises an "unidentified developer" error </b> <br/> Open the terminal.app application and: </p>
+                    <ul>
+                      <li>type <code>sudo xattr -rd com.apple.quarantine </code> [don't forget the space at the end]</li>
+                      <li>drag and drop the Anaglyph.vst (or the format you're planning to use) into the terminal window</li>
+                      <li>hit the "return" key, provide your admin password, hit "return" again</li>
+                      <li>relaunch your DAW, eventually re-scan for plugins</li>
+                    </ul>
+
             </div>
         </div>
 
