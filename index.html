@@ -100,7 +100,7 @@
                 <!-- <h1><font color="#0771ba">Ana</font><font color="#fb001a">glyph</font></h1> -->
             </div>
             <div class="col-lg-12 text-justify">
-                <p> High-definition Binaural spatialization engine. </p>
+                <p> High-definition binaural spatialization engine </p>
             </div>
 
             <p> </p> <!-- insert line break -->
@@ -108,14 +108,14 @@
             <div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
                 <p style="margin-top: 20px; margin-bottom: 0px;">
                     <!-- <i>Integrating the results of over a decade of spatial hearing research into a high-precision binaural rendering engine.</i> -->
-                    <i>Integrating the results of over a decade of spatial hearing research.</i>
+                    <i>Integrating the results of over a decade of spatial hearing research</i>
                 </p>
                 <img class="img-responsive center-block" style="margin-top: 0px;" src="img/anaglyph-gui.jpg">
             </div>
 
              <div class="col-sm-12 text-justify">
                 <p>
-                    Anaglyph is part of an ongoing research effort into the perceptual and technical capabilities of binaural rendering. The latest incarnation, Anaglyph <a href="https://en.wikipedia.org/wiki/Virtual_Studio_Technology">VST</a>, has been designed as an audio plugin to both support ongoing research efforts as well as to make accessible the fruits of this research to audio engineers through traditional existing <a href="https://en.wikipedia.org/wiki/Digital_audio_workstation">DAW</a> environments. Amongst its features, Anaglyph includes a personalizable morphological ITD model,  near-field ILD corrections and <a href="https://en.wikipedia.org/wiki/Head-related_transfer_function">HRTF</a> parallax selection, a Localisation Enhancer, an Externalisation Booster, and <a href="https://www.sofaconventions.org/mediawiki/index.php/SOFA_(Spatially_Oriented_Format_for_Acoustics)">SOFA</a> HRIR file support.
+                    Anaglyph is part of an ongoing research effort into the perceptual and technical capabilities of binaural rendering. This audio plugin was designed both to support ongoing research efforts as well as to make accessible the fruits of this research to audio engineers working in <a href="https://en.wikipedia.org/wiki/Digital_audio_workstation">DAW</a> environments. Amongst its features, Anaglyph includes a personalizable morphological ITD model,  near-field ILD corrections and <a href="https://en.wikipedia.org/wiki/Head-related_transfer_function">HRTF</a> parallax selection, a localisation enhancer, an externalisation booster, and multiple HRTF support via the <a href="https://www.sofaconventions.org/mediawiki/index.php/SOFA_(Spatially_Oriented_Format_for_Acoustics)">SOFA</a> file format.
                 </p>
             </div>
         </div>
@@ -136,9 +136,11 @@
 
                     <p> <a href="mailto: sympa@listes.upmc.fr?subject=subscribe anaglyph"> Subscribe to the mailing list</a> for updates on future releases (<a href="https://www.listes.upmc.fr/wws/arc/anaglyph">newsletter archives</a>). Previous releases and release notes can be found <a href="page-misc.html#release-note">here</a>. </p>
 
+                    <!--
                     <p> </p>
                     <img class="img-responsive center-block" style="width:150px" src="img/anaglyph_logo_version_monkey.png">
                     <h5 class="text-center"> Anaglyph v 0.9 - Wise Monkey </h5>
+                     -->
 
             </div>
         </div>
@@ -148,17 +150,19 @@
             <div class="col-lg-12 text-justify">
                 <h2>Features</h2>
 
-                <h3>HRIR/HRTF Personalization</h3>
-                <p>Customization of binaural rendering parameters for a given listener. Select here the specific HRTF (ears), by choosing an appropriate HRTF/SOFA file. Tailor HEAD SIZE to optimize lateral cues.</p>
+                <h3>HRTF Personalization</h3>
+                <p>Customization of binaural rendering parameters for a given listener. Select an HRTF profile that best suits your morphology to improve overall localization. Adjust the rendering based on your head diameter to improve lateral localization.</p>
 
                 <h3>Near-Field Enhancements</h3>
-                <p>Rendering enhancements that improve the sensation of distance for nearby source positions. PARALLAX correction selects HRIR positions based on the actual direction of arrival of the sound object as &#8220;seen&#8221; by each ear, rather than using the head-centered coordinate system. ILD correction modifies the right/left levels, as a function of frequency, to account for the head shadowing effect of nearby sound objects. This modification is applied predominantly to the opposite side ear, in an effort to maintain sound level of the nearby ear.</p>
+                <p>Rendering enhancements that improve the sensation of distance for nearby source positions. Parallax correction selects HRIR positions based on the actual direction of arrival of the sound object as &#8220;seen&#8221; by each ear, rather than using a head-centered coordinate system. ILD correction modifies the left and right ear levels, as a function of frequency, to account for the head shadowing effect of nearby sound objects. The ILD correction is predominantly applied to the contralateral (opposite side) ear, in an effort to maintain sound level at the ipsilateral (nearby) ear.</p>
 
                 <h3>Externalization Booster</h3>
-                <p>When rendering sounds over headphones, a common artifact is that sounds seem to be very near, or even inside, the listeners head. This does not typically occur when listening over monitor speakers in a studio. This module adds the subtle acoustic cues of a reproduction system in an acoustically controlled studio, providing improved externalization. This is not to be confused with a reverberation plug-in. GAIN, EQ, and SPATIAL DETAIL level can be adjusted to optimize the effect for the given soundscape to improve transparency while providing these additional cues.</p>
+                <p>When rendering sounds over headphones, a common artifact is that sounds seem to be very near, or even inside, the listeners head. This does not typically occur when listening over monitor speakers in a studio. This module adds the subtle acoustic cues of a reproduction system in an acoustically controlled studio, providing improved externalization. This is not to be confused with a reverberation plug-in. Gain, EQ, and spatial resolution (Ambisonic order) can be adjusted to optimize the externalization.
+                <!-- while keeping the reverb transparent -->
+                </p>
 
                 <h3>Stabilization Enhancer</h3>
-                <p>In the case of non-tracked binaural rendering, static source positions are sometimes difficult to localize correctly, with front/back confusions often occurring for sources in certain regions. To reduce such confusions, and to help stabilize the perceived position of the sound object, the actual rendered position is varied slightly, providing &#8220;added redundancy&#8221; of localization cues to the brain, reducing localization confusion.</p>
+                <p>In the case of non-tracked binaural rendering, static source positions are sometimes difficult to localize correctly, with front/back confusions often occurring for sources in certain regions. To reduce such confusions, and to help stabilize the perceived position of the sound object, the actual rendered position is varied slightly, providing &#8220;added redundancy&#8221; of localization cues to the brain, aiming at reducing localization confusion.</p>
             </div>
         </div>
 
@@ -174,7 +178,7 @@
                 </p>
 
                 <p>
-                    <b>License</b>: The Anaglyph binaural audio engine is released under the <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND 3.0</a> license.
+                    <b>License</b>: The Anaglyph binaural audio engine is released under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.
                     <!-- <a href="mailto:anaglyph@dalembert.upmc.fr">Contact us </a> to discuss licensing terms for commercial use. -->
                 </p>
 
@@ -182,7 +186,7 @@
                     <b>Credits</b>:
                     Anaglyph was developed in the context of numerous academic research projects with the CNRS (previously under the name LSE) and Sorbonne University, with participation by the Dyson School of Engineering, Imperial College London within the remit of the <a href="http://3d-tune-in.eu/">3D Tune-In</a> project.
                     <br>
-                    The Anaglyph project is supervised by <a href="http://www.lam.jussieu.fr/Membres/Katz/index.php?page=accueil">B. F.G. Katz</a>.
+                    The Anaglyph project is supervised by <a href="http://www.lam.jussieu.fr/Membres/Katz/index.php?page=accueil">Brian F.G. Katz</a>.
                 </p>
             </div>
             <div class="col-lg-12 text-center">
