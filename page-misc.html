@@ -100,6 +100,12 @@
                       <td> &#10068; </td>
                     </tr>
                     <tr>
+                      <th scope="row">Cubase</th>
+                      <td> &#10004; </td>
+                      <td> &#10068; </td>
+                      <td> &#10068; </td>
+                    </tr>
+                    <tr>
                       <th scope="row">FL Studio</th>
                       <td> &#10004; </td>
                       <td> &#10004; </td>
@@ -170,17 +176,19 @@
             <div class="col-lg-12 text-justify">
                 <h2>Release notes</h2>
 
+                <p> <b>v0.9.5:</b> Removed VST support, removed MacOS Intel support (both 64 and 32 bits). Fixed signing issue on MacOS. &#8220;Bypass interpolation&#8221 now applies to all the elements relying on HRTF (was only binaural direct, now includes ambisonic room reverb and ambisonic to binaural decoder).</p>
+
                 <p> <b>v0.9.4c:</b> Replaced partitioned convolution by classic convolution, reducing CPU usage.</p>
 
                 <p> <b>v0.9.4b:</b> Updated to JUCE v6.0.4, using the new convolver implementation. Support &#8220;run FX when stopped&#8221; when DAW not in playback mode. Minor bug fixes and GUI updates.</p>
 
-                <p> <b>v0.9.4:</b> Added knob to control IR crossfade duration (tradeoff between responsiveness when moving audio sources and zipper noise free rendering). Minor bug fixes and DSP optimizations.</p>
+                <p> <b>v0.9.4:</b> Added knob to control IR cross-fade duration (trade-off between responsiveness when moving audio sources and zipper noise free rendering). Minor bug fixes and DSP optimizations.</p>
 
                 <p> <b>v0.9.3b:</b> Added Unity, Logic Pro, and Windows 32 bit support. Threaded file loading (responsive UI). Updated to JUCE v5.4.3. Parallax applied on ITD selection&#42;. ITD model applied on virtual speakers&#42;. Using JUCE dsp::Convolution for room reverb and Ambisonic decoder&#42;. UI calls throttling (e.g. discard unchanged source pos). Updated HRIR normalization (from peak to energy). Rigorous UI clipping notification. &#42;<i>previously used only in the main binaural encoder</i>. </p>
 
                 <p> <b>v0.9.2c:</b> Fixed critical issue on binaural convolution in v0.9.2b. FL Studio support (and all other DAWs with ever varying input buffer size).</p>
 
-                <p> <b>v0.9.2b:</b> Using JUCE dsp::Convolution for main HRIR convolution, reduced plugin loading time (neighbor search tree initialization in MySofa library), fixed error introduced in v0.9.2 in externalization booster (Ambisonic order no taken into account).</p>
+                <p> <b>v0.9.2b:</b> Using JUCE dsp::Convolution for main HRIR convolution, reduced plugin loading time (neighbour search tree initialization in MySofa library), fixed error introduced in v0.9.2 in externalization booster (Ambisonic order no taken into account).</p>
 
                 <p> <b>v0.9.2:</b> Now using JUCE dsp::Convolution object for room IR convolution (remove zipper noise on source position update with STUDIO enabled), fixed variable buffer length crash (DAW's buffer length is only an upper bound according to VST specification), changed default distance exponent from 2 to 1, inverted positions of low, mid, and high EQ knobs in GUI, fixed armed AP not updated from DAW interaction with 3D GUI.</p>
 
